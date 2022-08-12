@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.blue{
+    color: #4ba8dd;
+    background-color: #e9e9e9;
+}
+.wrapper{
+    width:100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+/* ================= */
+/* Область навигации */
+/* ================= */
+.navigation{
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b;
+    position: relative;
+    transition: 1s;
+    z-index: 100;
+}
+.navigation_active{
+    transform: translateX(-100%);
+}
+.navigation ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navigation li{
+    text-align: center;
+    padding: 20px 70px;
+    transition: 0.5s transform;
+}
+.navigation li:hover{
+    background-color: #e9e9e9;
+    transform: skewY(-5deg);
+}
+.navigation a{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #e9e9e9;
+}
+.navigation li:hover a{
+    color: #4ba8dd;
+}
+.arrow_back{
+    width: 30px;
+    height: 5px;
+    background-color: #e9e9e9;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.arrow_back:hover{
+    background-color: #4ba8dd;
+}
+.arrow_back::after,.arrow_back::before{
+    content: '';
+    width: 15px;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: inherit;
+}
+.arrow_back::after{
+    transform: rotate(30deg);
+    top: 3px;
+    left: 0px;
+}
+.arrow_back::before{
+    transform: rotate(-30deg);
+    top: -3px;
+    left: 0px;
+}
+/* ================= */
+/* Область Заголовка */
+/* ================= */
+.header{
+    width: 90%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+}
+.header .burger_menu{
+    cursor: pointer;
+    width: 30px;
+    height: 5px;
+    background-color: #e9e9e9;
+    position: relative;
+    transition: 0.5s;
+}
+.header .burger_menu:hover{
+    background-color: #4ba8dd;
+}
+.header .burger_menu:before,.header .burger_menu:after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background-color: inherit;
+}
+.header .burger_menu:before{
+    top: -10px;
+}
+.header .burger_menu:after{
+    top: 10px;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    background-image: url(./img/logo.png);
+    background-size: contain;
+}
+/* ================= */
+/*   Первая секция   */
+/* ================= */
+.main__section{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.main_section_div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.main_section_div::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000049;
+    z-index: 2;
+}
+.main_h1_div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #4ba8dd;
+    /* background-color: #000; */
+    width: 60%;
+    height: 100%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 530%;
+    text-transform: uppercase;
+    color: #e9e9e9;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    display: flex;
+    align-items: center;
+    cursor:default;
+    z-index: 3;
+}
+.main_h1{
+    letter-spacing: 5px;
+    line-height: 250px;
+}
+.main_bg_video{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 50%;
+}
+.bg_video{
+    width: 100%;
+    height: auto;
+    margin-top: -20%;
+}
+/* ================= */
+/*   Вторая секция   */
+/* ================= */
+.product{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 3;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+
+}
+.soda{
+    z-index: 3;
+}
+.izvest{
+    z-index: 4;
+}
+.gips{
+    z-index: 5;
+}
+.plaster{
+    z-index: 6;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    position: absolute;
+}
+.soda_img, .izvest_img, .gips_img, .plaster_img{
+    width: 50%;
+    height: 100%;
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.soda_img{
+    background-image: url(./img/soda.jpg);
+}
+.izvest_img{
+    background-image: url('./img/izvest1(2).jpg');
+}
+.gips_img{
+    background-image: url('./img/gips_pel\(1\).JPEG');
+}
+.plaster_img{
+    background-image: url(./img/plaster.JPEG);
+}
+.description{
+    width: 60%;
+    height: 100%;
+    background-color: #1b1b1b;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10em;
+}
+.soda_item, .izvest_item, .gips_item, .plaster_item{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #4ba8dd;
+    margin-top: 20px;
+}
+.slider_nav{
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    background-color: #00000049;
+}
+.slides{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #e9e9e9;
+}
+.nav_slide{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+.slides .active{
+    top: 25%;
+    right: 15%;
+    color: #4ba8dd;
+    font-size: 42px;
+}
+/* ================= */
+/*   третья секция   */
+/* ================= */
+.partners{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 4;
+    transition: 1s;
+    overflow: hidden;
+}

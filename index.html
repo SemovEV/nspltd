@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="rus">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новотроицкий содовый завод</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet">
+    
+    <script src = "./scripts/variables.js" defer></script>
+    <script src = "./scripts/nav.js" defer></script>
+    <script src = "./scripts/scroll.js" defer></script>
+    <script src = "./scripts/slider.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navigation navigation_active">
+            <nav>
+                <div class="arrow_back"></div>
+                <ul>
+                    <li><a href="#">Первая секция</a></li>
+                    <li><a href="#">Вторая секция</a></li>
+                    <li><a href="#">Третья секция</a></li>
+                    <li><a href="#">Четвертая секция</a></li>
+                    <li><a href="#">Пятая секция</a></li>
+                </ul>
+            </nav>
+        </div>
+        <header class = 'header'>
+            <div class="burger_menu"></div>
+            <div class="logo"></div>
+        </header>
+        <section class = "main__section">
+            <div class="main_section_div">
+                <div class="main_h1_div">
+                    <h1 class="main_h1">Новотроицкий <span class = "blue">содовый </span> завод</h1>
+                </div>
+                <div class="main_bg_video">
+                    <video class = 'bg_video' src="./img/main_bg.mp4" autoplay muted loop></video>
+                </div>
+            </div>
+        </section>
+        <section class="product" style = "transform: translateY(100vh)">
+            <div class="slider">
+                <!-- Заполняется в slider.js -->
+            </div>
+            <div class="slider_nav">
+                <ul class="slides">
+                    <li class="nav_slide active">СОДА КАЛЬЦИНИРОВАННАЯ</li>
+                    <li class="nav_slide">ИЗВЕСТЬ ГАШЁННАЯ</li>
+                    <li class="nav_slide">ГИПС</li>
+                    <li class="nav_slide">ШТУКАТУРКА</li>
+                    <!-- <li class="nav_slide"></li> -->
+                </ul>
+            </div>
+        </section>
+        <section class="partners" style = "transform: translateY(100vh)">
+            
+        </section>
+    </div>
+</body>
+</html>
