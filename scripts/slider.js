@@ -59,7 +59,7 @@ function render(){
     offset = 1;
 }
 
-
+render();render();
 function slide_right(){
     //начальное расположение заголовков
     if(countNameSlide >= 0)
@@ -87,16 +87,16 @@ function slide_right(){
     }
     switch (countNameSlide) {
         case 0:
-            nav_slide[countNameSlide].style.right = "13%";
+            nav_slide[countNameSlide].style.right = "15vw";
             break;
         case 1:
-            nav_slide[countNameSlide].style.right = "17%";
+            nav_slide[countNameSlide].style.right = "15vw";
             break;
         case 2:
-            nav_slide[countNameSlide].style.right = "27%";
+            nav_slide[countNameSlide].style.right = "15vw";
             break;
         case 3:
-            nav_slide[countNameSlide].style.right = "22%";
+            nav_slide[countNameSlide].style.right = "15vw";
             break;
     
         default:
@@ -111,6 +111,8 @@ function slide_right(){
     }, 1000);
 }
 
+interval = setInterval(slide_right, 5000);
+
 function navSlideClick(e){
     // debugger
     clearInterval(interval);
@@ -118,12 +120,13 @@ function navSlideClick(e){
     slides2[1].remove();
     for(var i = 0; i < slider_array.length; i++){
         if(nav_slide[i] == e.target){
+            // nav_slide[countNameSlide].classList.remove('active');
             nav_slide[countNameSlide].style.right = `${(100 / 4) * (nav_slide.length - countNameSlide - 1)}%`;
             countNameSlide = i-1;
             countSlider = i;
             render();
             setTimeout(slide_right, 1000);
-            // interval = setInterval(slide_right, 5000);
+            interval = setInterval(slide_right, 5000);
         }
     }
 }

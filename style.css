@@ -95,7 +95,7 @@ li{
 /* Область Заголовка */
 /* ================= */
 .header{
-    width: 90%;
+    width: 96%;
     height: 100px;
     position: absolute;
     top: 0;
@@ -210,7 +210,7 @@ li{
     left: 0;
     background-color: #fff;
     z-index: 3;
-    transition: 1s;
+    transition: 0.6s;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -314,10 +314,13 @@ li{
     letter-spacing: 5px;
     cursor: pointer;
     transition: 1s;
+    width: 15vw;
+    text-align: center;
 }
 .slides .active{
-    top: 25%;
-    right: 15%;
+    width: 30vw;
+    top: 25vh;
+    right: -30vw;
     color: #4ba8dd;
     font-size: 42px;
 }
@@ -332,6 +335,63 @@ li{
     left: 0;
     background-color: #fff;
     z-index: 4;
-    transition: 1s;
+    transition: 0.6s;
     overflow: hidden;
+    display: flex;
+}
+.about_us{
+    width: 20%;
+    background-color: #4ba8dd;
+}
+.name{
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 10px;
+    margin: 10vh 4vw;
+    color: #fff;
+}
+.about_us_content{
+    display: grid;
+    align-content: end;
+    width: 70%;
+    height: 50vh;
+    margin: 10vh 2vw;
+    padding-left: 2vw;
+    /* border-left: 3px solid #00000049; */
+    border-left: 3px solid #fff;
+}
+.about_us_content .title{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: #fff;
+}
+.about_us_content .title_descrip{
+    margin-top: 5vh;
+    color:#333333;
+}
+.cards{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-top: 30vh;
+    padding-left: 15vw;
+}
+.card{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    background-color: #33333394;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.avatar_name{
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin-bottom: 10px;
 }
