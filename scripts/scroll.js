@@ -22,7 +22,7 @@ function onWheel(e) {
   summScroll = (summScroll + delta/2);
   console.log(summScroll);
   product_scroll = 100 - summScroll;
-  partners_scroll = 200 - summScroll;
+  partners_scroll = 300 - summScroll;
 
   if (product_scroll <= 0){
     product_scroll = 0;
