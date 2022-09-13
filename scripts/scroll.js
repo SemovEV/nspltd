@@ -31,8 +31,8 @@ function onWheel(e) {
     }
   }else if (product_scroll >= 100){
     product_scroll = 100;
-    if(partners_scroll >= 200){
-      partners_scroll = 200;
+    if(partners_scroll >= 300){
+      partners_scroll = 300;
     }
   }
   product.style.transform = `translateY(${product_scroll}vh)`;
